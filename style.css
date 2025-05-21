@@ -198,7 +198,7 @@ ol, ul{
     background-position: center;
     background-repeat: no-repeat;
     height: 1200px;
-    width: 100vw;
+    width: 1200px;
     z-index: 1;
     position: fixed;
     overflow: hidden;
