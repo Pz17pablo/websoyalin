@@ -202,6 +202,20 @@ ol, ul{
     z-index: 1;
     position: fixed;
     overflow: hidden;
+    display: none;
+}
+
+#cel{
+    background-image: url("wallpaper-cut-cel.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+    display: inline-block;
+    position: relative;
+
 }
 
 /* === NAV BAR BASE === */
@@ -481,6 +495,149 @@ ol, ul{
     text-align: center;
 }
 
+/* Productos */
+.productos {
+    position: relative;
+    z-index: 3;
+    background-color: #fefdf9;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.productos h1 {
+    font-size: 2.2rem;
+    color: var(--font-color);
+    margin-bottom: 40px;
+}
+
+.productos-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.producto-card {
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 280px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.producto-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.producto-card .top{
+    position: absolute;
+    background-color: var(--font-color);
+    font-size: .9em;
+    text-align: left;
+    padding: 2px 7px;
+    color: var(--second-bg-color);
+    border-radius: 3px 6px 3px 3px;
+    right: 20px;
+    top: 20px;
+}
+
+.producto-card .precio{
+    position: absolute;
+    background-color: var(--font-color);
+    font-size: 1.2em;
+    text-align: left;
+    padding: 2px 7px;
+    color: var(--white);
+    border-radius: 15px 15px 6px 15px;
+    right: 20px;
+    top: 170px;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    color: var(--font-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.producto-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.producto-card button {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    background-color: var(--font-color);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.producto-card button:hover{
+    background: var(--second-bg-color);
+    color: var(--font-color);
+    border: 1px solid var(--font-color);
+}
+
+.product-mayor{
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+.product-mayor:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-mayor h2{
+    font-size: 2.2rem;
+    color: var(--font-color);
+    margin-bottom: 30px;
+}
+
+.product-mayor p{
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.product-mayor button{
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    background-color: var(--font-color);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.product-mayor button:hover{
+    background: var(--font-hover-color);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
 /* Remedios Naturales */
 #rem-nat{
     position: relative;
@@ -587,178 +744,6 @@ ol, ul{
   cursor: pointer;
   border-radius: 0 0 10px 10px;
   transition: background 0.3s;
-}
-
-/* Productos */
-.productos {
-    position: relative;
-    z-index: 3;
-    background-color: #fefdf9;
-    margin: 260px 0;
-    padding: 60px 30px;
-    text-align: center;
-}
-
-.productos h1 {
-    font-size: 2.2rem;
-    color: var(--font-color);
-    margin-bottom: 40px;
-}
-
-.productos-grid {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.producto-card {
-    background: var(--second-bg-color);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 280px;
-    padding: 20px;
-    transition: transform 0.3s ease;
-    text-align: center;
-    position: relative;
-}
-
-.producto-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.producto-card .top{
-    position: absolute;
-    background-color: var(--font-color);
-    font-size: .9em;
-    text-align: left;
-    padding: 2px 7px;
-    color: var(--second-bg-color);
-    border-radius: 3px 10px 3px 3px;
-    right: 20px;
-    top: 20px;
-}
-
-.producto-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 15px;
-}
-
-.producto-card h3 {
-    color: var(--font-color);
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.producto-card p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-}
-
-.producto-card button {
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    background-color: var(--font-color);
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.producto-card button:hover{
-    background: var(--second-bg-color);
-    color: var(--font-color);
-    border: 1px solid var(--font-color);
-}
-
-/* Página productos */
-.productos-container{
-    background-color: #fefdf9;
-    padding: 60px 30px;
-    text-align: center;
-}
-
-.productos-container h1{
-    padding: 90px 0 20px 0;
-    font-size: 2.2rem;
-    color: var(--font-color);
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.productos-grid-section{
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.producto-card-section{
-    background: var(--second-bg-color);
-    border-radius: 10px;
-    box-shadow:  0 5px 15px rgba(0,0,0,0.1);
-    width: 280px;
-    height: 380px;
-    padding: 20px;
-    transition: transform 0.3s ease;
-    text-align: center;
-    position: relative;
-    align-items: center;
-}
-
-.producto-card-section:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.producto-card-section .top{
-    position: absolute;
-    background-color: var(--font-color);
-    font-size: .9em;
-    text-align: left;
-    padding: 2px 7px;
-    color: var(--second-bg-color);
-    border-radius: 3px 10px 3px 3px;
-    right: 20px;
-    top: 20px;
-}
-
-.producto-card-section img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 15px;
-}
-
-.producto-card-section h3{
-    color: var(--font-color);
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.producto-card-section button{
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    background-color: var(--font-color);
-    color: var(--white);
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    bottom: 10px;
-    position: absolute;
-}
-
-.producto-card-section button:hover{
-    background: var(--white);
-    color: var(--font-color);
-    border: 1px solid var(--font-color);
 }
 
 /* Sobre nosotros */
@@ -907,6 +892,13 @@ ol, ul{
 
 #contact-form button:hover{
     background: var(--font-hover-color);
+}
+
+#contacto p{
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: var(--font-hover-color);
+    font-weight: bold;
 }
 
 /* Footer */
