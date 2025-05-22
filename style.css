@@ -504,7 +504,7 @@ ol, ul{
     position: relative;
     z-index: 3;
     background-color: #fefdf9;
-    padding: 60px 30px;
+    padding: 40px 30px 90px 30px;
     text-align: center;
 }
 
@@ -647,7 +647,7 @@ ol, ul{
     position: relative;
     z-index: 3;
     background-color: var(--nature-color-light);
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 .remedios-header{
