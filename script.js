@@ -30,6 +30,15 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
   });
 });
 
+document.querySelectorAll('.ver-mas').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const extra = btn.previousElementSibling;
+    const visible = extra.classList.contains('visible');
+    extra.classList.toggle('visible');
+    btn.textContent = visible ? 'Ver más' : 'Ver menos';
+  });
+});
+
     const OFFSET = 80;
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -57,52 +66,6 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
     menuBtn.style.display = 'none';
     closeBtn.style.display = 'inline-block';
   }
-
-  // Función para cerrar el menú
-  // function closeMenu(e) {
-  //   e.preventDefault();
-  //   dropdown.classList.remove('active');
-  //   menuBtn.style.display = 'inline-block';
-  //   closeBtn.style.display = 'none';
-  // }
-
-  // // Eventos para abrir/cerrar desde botones
-  // menuBtn.addEventListener('click', openMenu);
-  // closeBtn.addEventListener('click', closeMenu);
-
-  // // ✅ Cerrar al hacer clic en cualquier enlace del menú
-  // dropdown.querySelectorAll('a').forEach(link => {
-  //   link.addEventListener('click', () => {
-  //     closeMenu(new Event('click'));
-  //   });
-  // });
-
-  
-
-
-  // // ✅ Cerrar al hacer clic fuera del nav
-  // document.addEventListener('click', (e) => {
-  //   const isClickInside = dropdown.contains(e.target) || menuBtn.contains(e.target) || closeBtn.contains(e.target);
-  //   if (!isClickInside) {
-  //     dropdown.classList.remove('active');
-  //     menuBtn.style.display = 'inline-block';
-  //     closeBtn.style.display = 'none';
-  //   }
-  // });
-
-  // // ✅ Submenú con flecha y checkbox
-  // document.querySelectorAll('.dropdown-list').forEach(item => {
-  //   const check = item.querySelector('.dropdown-check');
-  //   const arrow = item.querySelector('.dropdown-arrow');
-
-  //   if (check && arrow) {
-  //     arrow.addEventListener('click', (e) => {
-  //       e.preventDefault();
-  //       item.classList.toggle('open');
-  //       check.checked = !check.checked;
-  //     });
-  //   }
-  // });
 
   document.addEventListener('DOMContentLoaded', () => {
   const menuButton = document.querySelector('.nav-menu');
@@ -135,3 +98,13 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
     });
   });
 });
+
+  // ✅ Cerrar al hacer clic fuera del nav
+  document.addEventListener('click', (e) => {
+    const isClickInside = dropdown.contains(e.target) || menuBtn.contains(e.target) || closeBtn.contains(e.target);
+    if (!isClickInside) {
+      dropdown.classList.remove('active');
+      menuBtn.style.display = 'inline-block';
+      closeBtn.style.display = 'none';
+    }
+  });

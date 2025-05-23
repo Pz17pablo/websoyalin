@@ -50,147 +50,6 @@ ol, ul{
     list-style: none;
 }
 
-/* Barra de navegación */
-/* #nav-bar{
-    background: var(--black);
-    color: #fff;
-    cursor: default;
-    height: 80px;
-    width: 100%;
-    --img1: scale(1);
-    --img2: scale(0);
-    z-index: 100;
-    box-shadow: 0 10px 16px #00000050;
-}
-
-#nav-bar:has(.dropdown:target){
-    --img1: scale(0);
-    --img2: scale(1);
-    --clip: inset(0 0 0 0);
-}
-
-.nav-bar-container{
-    width: 95%;
-    margin: 0 auto;
-    padding: 10px 0;
-    display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-areas: "title img";
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-}
-
-.logo{
-    height: 60px;
-    grid-area: title;
-    transition: all 0.3s ease;
-}
-
-.logo:hover{
-    transform: scale(1.05);
-}
-.logo img{
-    height: 100%;
-    z-index: 111;
-}
-
-.nav-menu{
-    grid-area: img;
-    position: relative;
-    z-index: 20;
-    transform: var(--img1);
-}
-
-.nav-menu--second{
-    transform: var(--img2);
-}
-
-.nav-icon{
-    width: 30px;
-    display: block;
-}
-
-.dropdown{
-    position: absolute;
-    background: var(--black);
-    width: 75%;
-    max-width: 300px;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 1em;
-    display: grid;
-    align-content: center;
-    gap: 1rem;
-    overflow-y: auto;
-    clip-path: var(--clip, inset(0 0 100% 100%));
-    transition: clip-path .5s;
-    z-index: 19;
-}
-
-.dropdown-list{
-    list-style: none;
-}
-
-.dropdown-link{
-    color: rgb(184, 187, 191);
-    padding: 1em .7em;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: .6em;
-    position: relative;
-    background-color: var(--bg, transparent);
-    border-radius: 6px;
-}
-
-.dropdown-list:has(:checked){
-    --rows: 1fr;
-    --rotate: rotate(180deg);
-    --bg: #ffffff48;
-}
-
-.dropdown-check{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.dropdown-arrow{
-    margin-left: auto;
-    transform: var(--rotate, 0);
-    transition: .2s transform;
-}
-
-.dropdown-content{
-    display: grid;
-    grid-template-rows: var(--rows, 0fr)0fr;
-    transition: .3s grid-template-rows;
-}
-
-.dropdown-sub{
-    overflow: hidden;
-    background-color: rgb(173, 103, 55, 0.2);
-    border-radius: 6px;
-}
-
-.dropdown-li{
-    width: 85%;
-    list-style: none;
-    margin-left: auto;
-}
-
-.dropdown-anchor{
-    padding: 1em;
-    display:block;
-    color: #fff;
-    text-decoration: none;
-} */
-
-
 .bg-img{
     background-image: linear-gradient() url("wallpaper-cut.png");
     background-size: cover;
@@ -273,7 +132,8 @@ ol, ul{
     list-style: none;
     background-color: var(--black);
     position: absolute;
-    width: 70%;
+    width: 100%;
+    height: 100vh;
     top: 100%;
     right: 0;
     transform: translateY(-20px);
@@ -533,6 +393,7 @@ ol, ul{
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     width: 280px;
+    max-height: 100%;
     padding: 20px;
     transition: transform 0.3s ease;
     text-align: center;
@@ -540,6 +401,7 @@ ol, ul{
 }
 
 .producto-card:hover {
+    border: 1px solid var(--font-color);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -578,13 +440,39 @@ ol, ul{
 
 .producto-card h3 {
     color: var(--font-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 20px;
     margin-bottom: 10px;
+}
+
+.producto-card span {
+    font-size: 1rem;
+    color: var(--font-color);
+    margin-bottom: 10px;
+}
+
+.info-extra{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: #f3f3f3;
+    padding: 0px 10px 0px 10px;
+}
+
+.info-extra.visible {
+    max-height: 300px;
+    padding: 0px 10px 0px 10px;
 }
 
 .producto-card p {
     font-size: 0.95rem;
     margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: .1px;
+}
+
+.producto-card .desc {
+    display: none;
 }
 
 .producto-card button {
@@ -614,6 +502,7 @@ ol, ul{
     transition: transform 0.3s ease;
     text-align: center;
     position: relative;
+    border: 1px solid var(--font-color);
 }
 .product-mayor:hover {
     transform: translateY(-3px);
@@ -623,13 +512,15 @@ ol, ul{
 .product-mayor h2{
     font-size: 2.2rem;
     color: var(--font-color);
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .product-mayor p{
     font-size: 1.2rem;
     color: var(--black);
     margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: .1px;
 }
 
 .product-mayor button{
@@ -730,18 +621,18 @@ ol, ul{
     overflow: hidden;
     transition: max-height 0.4s ease;
     background-color: #f3f3f3;
-    padding: 0 15px;
+    padding: 0px 10px 0px 10px;
 }
 
 .remedios-extra ul {
-    margin: 10px 0;
+    margin:  15px; 
     padding-left: 18px;
     text-align: left;
 }
 
 .remedios-extra.visible {
     max-height: 300px;
-    padding: 15px;
+    padding: 0px 10px 0px 10px;
 }
 
 .leer-mas {
