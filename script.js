@@ -59,44 +59,79 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
   }
 
   // Función para cerrar el menú
-  function closeMenu(e) {
-    e.preventDefault();
+  // function closeMenu(e) {
+  //   e.preventDefault();
+  //   dropdown.classList.remove('active');
+  //   menuBtn.style.display = 'inline-block';
+  //   closeBtn.style.display = 'none';
+  // }
+
+  // // Eventos para abrir/cerrar desde botones
+  // menuBtn.addEventListener('click', openMenu);
+  // closeBtn.addEventListener('click', closeMenu);
+
+  // // ✅ Cerrar al hacer clic en cualquier enlace del menú
+  // dropdown.querySelectorAll('a').forEach(link => {
+  //   link.addEventListener('click', () => {
+  //     closeMenu(new Event('click'));
+  //   });
+  // });
+
+  
+
+
+  // // ✅ Cerrar al hacer clic fuera del nav
+  // document.addEventListener('click', (e) => {
+  //   const isClickInside = dropdown.contains(e.target) || menuBtn.contains(e.target) || closeBtn.contains(e.target);
+  //   if (!isClickInside) {
+  //     dropdown.classList.remove('active');
+  //     menuBtn.style.display = 'inline-block';
+  //     closeBtn.style.display = 'none';
+  //   }
+  // });
+
+  // // ✅ Submenú con flecha y checkbox
+  // document.querySelectorAll('.dropdown-list').forEach(item => {
+  //   const check = item.querySelector('.dropdown-check');
+  //   const arrow = item.querySelector('.dropdown-arrow');
+
+  //   if (check && arrow) {
+  //     arrow.addEventListener('click', (e) => {
+  //       e.preventDefault();
+  //       item.classList.toggle('open');
+  //       check.checked = !check.checked;
+  //     });
+  //   }
+  // });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.querySelector('.nav-menu');
+  const closeButton = document.querySelector('.nav-menu--second');
+  const dropdown = document.querySelector('.dropdown');
+  const checkboxes = document.querySelectorAll('.dropdown-check');
+
+  // Abrir menú
+  menuButton.addEventListener('click', () => {
+    dropdown.classList.add('active');
+    menuButton.style.display = 'none';
+    closeButton.style.display = 'block';
+  });
+
+  // Cerrar menú
+  closeButton.addEventListener('click', () => {
     dropdown.classList.remove('active');
-    menuBtn.style.display = 'inline-block';
-    closeBtn.style.display = 'none';
-  }
+    closeButton.style.display = 'none';
+    menuButton.style.display = 'block';
+    checkboxes.forEach(cb => cb.checked = false); // Cerrar todos los submenús
+  });
 
-  // Eventos para abrir/cerrar desde botones
-  menuBtn.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
-
-  // ✅ Cerrar al hacer clic en cualquier enlace del menú
+  // Cerrar menú y submenús al hacer clic en cualquier enlace
   dropdown.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      closeMenu(new Event('click'));
+      dropdown.classList.remove('active');
+      closeButton.style.display = 'none';
+      menuButton.style.display = 'block';
+      checkboxes.forEach(cb => cb.checked = false);
     });
   });
-
-  // ✅ Cerrar al hacer clic fuera del nav
-  document.addEventListener('click', (e) => {
-    const isClickInside = dropdown.contains(e.target) || menuBtn.contains(e.target) || closeBtn.contains(e.target);
-    if (!isClickInside) {
-      dropdown.classList.remove('active');
-      menuBtn.style.display = 'inline-block';
-      closeBtn.style.display = 'none';
-    }
-  });
-
-  // ✅ Submenú con flecha y checkbox
-  document.querySelectorAll('.dropdown-list').forEach(item => {
-    const check = item.querySelector('.dropdown-check');
-    const arrow = item.querySelector('.dropdown-arrow');
-
-    if (check && arrow) {
-      arrow.addEventListener('click', (e) => {
-        e.preventDefault();
-        item.classList.toggle('open');
-        check.checked = !check.checked;
-      });
-    }
-  });
+});
