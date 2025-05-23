@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
 const btnWpp = document.getElementById('btnWpp');
 
 
-
+// Boton de leer más
 document.querySelectorAll('.leer-mas').forEach(btn => {
   btn.addEventListener('click', () => {
     const extra = btn.previousElementSibling;
@@ -30,6 +30,7 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
   });
 });
 
+// Boton de ver mas
 document.querySelectorAll('.ver-mas').forEach(btn => {
   btn.addEventListener('click', () => {
     const extra = btn.previousElementSibling;

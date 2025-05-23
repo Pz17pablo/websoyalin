@@ -379,6 +379,7 @@ ol, ul{
     font-size: 2.2rem;
     color: var(--font-color);
     margin-bottom: 40px;
+    text-shadow: 1px 2px 4px #000000be;
 }
 
 .productos-grid {
@@ -425,7 +426,7 @@ ol, ul{
     text-align: left;
     padding: 2px 7px;
     color: var(--white);
-    border-radius: 15px 15px 6px 15px;
+    border-radius: 10px 10px 0px 0px;
     right: 20px;
     top: 170px;
 }
@@ -455,7 +456,8 @@ ol, ul{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    background-color: #f3f3f3;
+    background-color: var(--second-bg-color);
+    text-align: left;
     padding: 0px 10px 0px 10px;
 }
 
@@ -492,7 +494,7 @@ ol, ul{
     border: 1px solid var(--font-color);
 }
 
-.product-mayor{
+.product-mayorista{
     background: var(--second-bg-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -504,18 +506,18 @@ ol, ul{
     position: relative;
     border: 1px solid var(--font-color);
 }
-.product-mayor:hover {
+.product-mayorista:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.product-mayor h2{
+.product-mayorista h2{
     font-size: 2.2rem;
     color: var(--font-color);
     margin-bottom: 15px;
 }
 
-.product-mayor p{
+.product-mayorista p{
     font-size: 1.2rem;
     color: var(--black);
     margin-bottom: 20px;
@@ -523,7 +525,7 @@ ol, ul{
     letter-spacing: .1px;
 }
 
-.product-mayor button{
+.product-mayorista button{
     padding: 10px 20px;
     border: 1px solid transparent;
     background-color: var(--font-color);
@@ -534,7 +536,7 @@ ol, ul{
     transition: all 0.3s ease;
 }
 
-.product-mayor button:hover{
+.product-mayorista button:hover{
     background: var(--font-hover-color);
     color: var(--white);
     transform: scale(1.05);
