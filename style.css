@@ -40,6 +40,22 @@ body{
     --whatsapp-hover-color: #2ab641;
     --white: #fff;
     --black: #000;
+    --energetico-color: #ffb300;
+    --fibra-color: #96562b;
+    --snack-color: #e5ff00;
+    --azucar-color: #ffffff;
+    --desayuno-color: #4eff18;
+    --conservantes-color: #00ffff;
+    --miel-color: #ffbc58;
+    --fitness-color: #101342;
+    --vegano-color: #539e0c;
+    --proteina-color: #ffb300;
+    --versatil-color: #a51ea5;
+    --sin-color: #e20000;
+    --b12-color: #131f8f;
+    --condimento-color: #b9af52;
+    --queso-color: #f3f040;
+    
 }
 
 header, footer, nav, menu, section {
@@ -462,19 +478,99 @@ ol, ul{
 }
 
 .info-extra.visible {
-    max-height: 300px;
+    max-height: 600px;
     padding: 0px 10px 0px 10px;
 }
 
 .producto-card p {
     font-size: 0.95rem;
-    margin-bottom: 15px;
-    font-weight: 600;
+    margin-bottom: 5px;
+    font-weight: 400;
     letter-spacing: .1px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .producto-card .desc {
     display: none;
+}
+
+.label{
+    font-size: .8em;
+    color: var(--white);
+    margin-bottom: 10px;
+    background: var(--font-color);
+    display: inline-block;
+    border-radius: 50px;
+    padding: 2px 10px;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.energetico{
+    background: var(--energetico-color);
+    color: var(--black);
+}
+
+.fibra{
+    background: var(--fibra-color);
+    color: var(--white);
+}
+
+.snack{
+    background: var(--snack-color);
+    color: var(--black);
+}
+
+.desayuno{
+    background: var(--desayuno-color);
+    color: var(--black);
+}
+
+.miel{
+    background: var(--miel-color);
+    color: var(--black);
+}
+
+.fitness{
+    background: var(--fitness-color);
+    color: var(--white);
+}
+
+.proteina{
+    background: var(--proteina-color);
+    color: var(--black);
+}
+
+.versatil{
+    background: var(--versatil-color);
+    color: var(--white);
+}
+
+.sin{
+    background: var(--sin-color);
+}
+
+.vegano{
+    background: var(--vegano-color);
+    color: var(--black);
+}
+
+.b12{
+    background: var(--b12-color);
+    color: white;
+}
+
+.condimento{
+    background: var(--condimento-color);
+    color: var(--black);
+}
+
+.queso{
+    background: var(--queso-color);
+    color: var(--black);
 }
 
 .producto-card button {
