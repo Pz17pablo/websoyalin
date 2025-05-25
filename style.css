@@ -785,9 +785,6 @@ ol, ul{
     margin-top: 10px;
 }
 
-.oculta{
-    display: none;
-}
 .soyalin-info h1{
     color: var(--font-color);
     font-size: 2em;
