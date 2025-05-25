@@ -576,7 +576,8 @@ ol, ul{
 .producto-card button {
     padding: 10px 20px;
     background-color: var(--font-color);
-    color: white;
+    border: none;
+    color: var(--white);
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
@@ -585,7 +586,7 @@ ol, ul{
 
 .producto-card button:hover{
     background: var(--font-hover-color);
-    color: var(--second-bg-color);
+    color: var(--white;
 }
 
 .product-mayorista{
