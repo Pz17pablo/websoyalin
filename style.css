@@ -48,13 +48,14 @@ body{
     --conservantes-color: #00ffff;
     --miel-color: #ffbc58;
     --fitness-color: #101342;
-    --vegano-color: #539e0c;
+    --vegano-color: #76d320;
     --proteina-color: #ffb300;
     --versatil-color: #a51ea5;
     --sin-color: #e20000;
     --b12-color: #131f8f;
     --condimento-color: #b9af52;
     --queso-color: #f3f040;
+    --uso-color: #48f1a2;
     
 }
 
@@ -106,8 +107,8 @@ ol, ul{
     left: 0;
     width: 100%;
     z-index: 1000;
-    height: 80px;
-    padding: 10px 20px;
+    height: 65px;
+    padding: 10px 10px;
     transition: top 0.3s ease;
     display: flex;
     align-items: center;
@@ -129,7 +130,7 @@ ol, ul{
     transition: transform 0.3s ease;
 }
 .logo img {
-    height: 50px;
+    height: 40px;
 }
 
 .logo:hover {
@@ -330,7 +331,7 @@ ol, ul{
 
 .banner-video{
     width: 100%;
-    margin-top: 80px;
+    margin-top: 65px;
     position: relative;
     overflow: hidden;
     z-index: 2;
@@ -573,11 +574,16 @@ ol, ul{
     color: var(--black);
 }
 
+.uso{
+    background: var(--uso-color);
+    color: var(--black);
+}
+
 .producto-card button {
     padding: 10px 20px;
+    border: 1px solid transparent;
     background-color: var(--font-color);
-    border: none;
-    color: var(--white);
+    color: white;
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
@@ -586,7 +592,8 @@ ol, ul{
 
 .producto-card button:hover{
     background: var(--font-hover-color);
-    color: var(--white;
+    color: var(--white);
+    border: 1px solid var(--font-color);
 }
 
 .product-mayorista{
