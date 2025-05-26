@@ -416,6 +416,15 @@ ol, ul{
     transition: transform 0.3s ease;
     text-align: center;
     position: relative;
+
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+
+    animation-timeline: --card;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
 }
 
 .producto-card:hover {
@@ -607,6 +616,15 @@ ol, ul{
     text-align: center;
     position: relative;
     border: 1px solid var(--font-color);
+
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+
+    animation-timeline: --card;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
 }
 .product-mayorista:hover {
     transform: translateY(-3px);
@@ -676,6 +694,17 @@ ol, ul{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+
+.inner section{
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+
+    animation-timeline: --card;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
 }
 
 .remedio {
@@ -964,3 +993,16 @@ ol, ul{
         padding: 0 10px;
     }
 }
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to{
+        opacity: 1;
+        scale: 100%
+    }
+}
+
