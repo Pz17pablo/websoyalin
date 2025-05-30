@@ -40,21 +40,38 @@ document.querySelectorAll('.ver-mas').forEach(btn => {
   });
 });
 
-    const OFFSET = 80;
+  const OFFSET = 80;
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').slice(1);
-        const target = document.getElementById(targetId);
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: targetPosition - OFFSET,
-          behavior: 'smooth'
-        });
-      });
+  function scrollWithOffset(id) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: targetPosition - OFFSET,
+      behavior: 'smooth'
     });
+  }
 
+  // Enlaces internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').slice(1);
+      scrollWithOffset(targetId);
+      // Cambiar el hash sin saltar
+      history.pushState(null, '', `#${targetId}`);
+    });
+  });
+
+  // Si se carga con hash desde otra página
+  window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetId = hash.replace('#', '');
+      // Esperar un poquito para que se renderice todo
+      setTimeout(() => scrollWithOffset(targetId), 100);
+    }
+  });
 
   const menuBtn = document.querySelector('.nav-menu');
   const closeBtn = document.querySelector('.nav-menu--second');
