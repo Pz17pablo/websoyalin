@@ -12,6 +12,7 @@
 body{
     margin: 0;
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
 *::-webkit-scrollbar {
@@ -707,7 +708,6 @@ ol, ul{
 
 #page{
     padding: 0px 10px 60px 10px;
-    min-height: 100vh;
 }
 .productos a {
     text-decoration: none;
@@ -716,7 +716,6 @@ ol, ul{
 
 .product-container {
     max-width: 1200px;
-    min-height: 100vh;
     margin: auto;
     padding: 20px;
 }
