@@ -421,7 +421,6 @@ ol, ul{
 /* Productos */
 .productos {
     position: relative;
-    z-index: 3;
     background-color: #fefdf9;
     padding: 40px 30px 90px 30px;
     text-align: center;
@@ -517,7 +516,6 @@ ol, ul{
 .producto-card span {
     font-size: 1rem;
     color: var(--font-color);
-    margin-bottom: 10px;
 }
 
 .info-extra{
@@ -742,11 +740,11 @@ ol, ul{
 }
 
 .product-name {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .compra {
@@ -762,33 +760,33 @@ ol, ul{
 }
 
 .product-price {
-  font-size: 1.5rem;
-  color: green;
-  margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: green;
+    margin-bottom: 10px;
 }
 
 .product-description {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .product-tags {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .tag {
-  display: inline-block;
-  background-color: #e0ffe0;
-  color: #2e7d32;
-  padding: 5px 10px;
-  margin: 3px;
-  border-radius: 4px;
-  font-size: 0.9rem;
+    display: inline-block;
+    background-color: #e0ffe0;
+    color: #2e7d32;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }
 
 .nutrition-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
 .nutrition-table img{
@@ -797,17 +795,17 @@ ol, ul{
 }
 
 .related-products {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .related-products h2 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .related-list {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .related-item {
@@ -834,10 +832,10 @@ ol, ul{
 }
 
 .related-item img {
-  width: 100%;
-  max-width: 180px;
-  border-radius: 6px;
-  margin-bottom: 8px;
+    width: 100%;
+    max-width: 180px;
+    border-radius: 6px;
+    margin-bottom: 8px;
 }
 
 /* Remedios Naturales */
@@ -872,6 +870,7 @@ ol, ul{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 0 20px;
 }
 
 .inner section{
@@ -1065,13 +1064,15 @@ ol, ul{
 
 .nosotros-info p{
     font-size: 1.1rem;
-    margin: 25px;
+    margin: 15px;
 }
+
 .nosotros-info h3{
     font-size: 1.8rem;
     color: var(--font-color);
-    margin-bottom: 15px;
+    margin-top: 40px;
 }
+
 .nosotros-info ul{
     list-style: none;
     margin: 25px;
@@ -1226,22 +1227,46 @@ ol, ul{
     color: #999;
 
 }
-@media (max-width: 768px) {
-    .inner section {
-        width: 100%;
-        height: auto;
+@media (min-width: 645px) {
+
+    .productos h1 {
+        font-size: 3rem;
+    }
+    .big{
+        width: 480px;
+        height: 400px;
     }
 
-    .productos-grid,
-    .testimonios-grid {
-        flex-direction: column;
-        align-items: center;
+    .big img{
+        width: 80%;
+        height: 80%;
     }
 
-    #contact-form {
-        padding: 0 10px;
+    .producto-card .top{
+        font-size: 1.3rem;
+        right: 64px;
+        top: 20px;
     }
+
+    .big .precio{
+        font-size: 1.5rem;
+        right: 64px;
+        top: 271px;
+    }
+
+    .big h3{
+        font-size: 1.7rem;
+        line-height: 25px;
+    }
+
+
+    .big span{
+        font-size: 1.3rem;
+    }
+
 }
+
+
 
 @keyframes show {
     from {

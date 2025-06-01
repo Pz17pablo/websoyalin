@@ -73,6 +73,7 @@ document.querySelectorAll('.ver-mas').forEach(btn => {
     }
   });
 
+
   const menuBtn = document.querySelector('.nav-menu');
   const closeBtn = document.querySelector('.nav-menu--second');
   const dropdown = document.getElementById('menu');
