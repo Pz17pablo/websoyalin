@@ -1312,7 +1312,19 @@ ol, ul{
         top: 344px;
     }
 
+    .productos-grid{
+        padding: 10%;
+        gap: 40px;
+    }
 
+    .remedios-header{
+        padding: 0px 150px;
+    }
+
+    .inner {
+        padding: 0 50px;
+        gap: 40px;
+    }
 }
 
 
