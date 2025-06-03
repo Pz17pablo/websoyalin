@@ -137,6 +137,16 @@ ol, ul{
     transform: scale(1.05);
 }
 
+.nav-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: none;
+}
 /* === ICONOS DE MENÚ === */
 .nav-icon {
     width: 30px;
@@ -894,6 +904,7 @@ ol, ul{
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
 }
 
 .remedio:hover{
@@ -941,7 +952,7 @@ ol, ul{
 }
 
 .remedios-extra.visible {
-    max-height: 350px;
+    max-height: 450px;
     padding: 0px 10px 0px 10px;
 }
 
@@ -1227,7 +1238,13 @@ ol, ul{
     color: #999;
 
 }
+
+/* Media query */
 @media (min-width: 645px) {
+
+    #nav-bar {
+        height: 70px;
+    }
 
     .productos h1 {
         font-size: 3rem;
@@ -1264,8 +1281,39 @@ ol, ul{
         font-size: 1.3rem;
     }
 
+    .dropdown{
+        width: 300px;
+        right: 0;
+        top: 60px;
+        height: 100vh;
+    }
+
 }
 
+@media (min-width: 759px){
+
+}
+
+@media (min-width: 844px){
+    .big{
+        width: 600px;
+        height: 500px;
+    }
+
+    .big .top{
+        font-size: 1.5rem;
+        right: 76px;
+        top: 20px;
+    }
+
+    .big .precio{
+        font-size: 1.8rem;
+        right: 76px;
+        top: 344px;
+    }
+
+
+}
 
 
 @keyframes show {
@@ -1279,4 +1327,3 @@ ol, ul{
         scale: 100%
     }
 }
-

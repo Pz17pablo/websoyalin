@@ -20,23 +20,14 @@ window.addEventListener('scroll', () => {
 const btnWpp = document.getElementById('btnWpp');
 
 
-// Boton de leer más
 document.querySelectorAll('.leer-mas').forEach(btn => {
   btn.addEventListener('click', () => {
-    const extra = btn.previousElementSibling;
+    const card = btn.closest('.remedio'); // 👈 buscar la tarjeta completa
+    const extra = card.querySelector('.remedios-extra'); // 👈 buscar solo en su tarjeta
     const visible = extra.classList.contains('visible');
+    
     extra.classList.toggle('visible');
     btn.textContent = visible ? 'Leer más...' : 'Leer menos...';
-  });
-});
-
-// Boton de ver mas
-document.querySelectorAll('.ver-mas').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const extra = btn.previousElementSibling;
-    const visible = extra.classList.contains('visible');
-    extra.classList.toggle('visible');
-    btn.textContent = visible ? 'Ver más' : 'Ver menos';
   });
 });
 
