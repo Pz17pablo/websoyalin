@@ -335,8 +335,9 @@ ol, ul{
 
 /* btn volver */
 #btnback {
-    margin-top: 70px;
+    margin-top: 75px;
     margin-left: 5px;
+    margin-bottom: 10px;
     background-color: var(--font-color);
     color: white;
     border: none;
@@ -434,6 +435,9 @@ ol, ul{
     background-color: #fefdf9;
     padding: 40px 30px 90px 30px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .productos h1 {
@@ -659,13 +663,12 @@ ol, ul{
     background: var(--second-bg-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 100%;
-    margin-top: 40px;
+    width: 90%;
+    margin-top: 20px;
     padding: 20px;
     transition: transform 0.3s ease;
     text-align: center;
     position: relative;
-    border: 1px solid var(--font-color);
     cursor: pointer;
 
     view-timeline-name: --card;
@@ -998,8 +1001,16 @@ ol, ul{
     border-bottom: transparent;
 }
 
+#bienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 #bienvenida p{
     margin-top: 10px;
+    width: 70%;
 }
 
 .soyalin-info h1{
@@ -1230,13 +1241,18 @@ ol, ul{
     padding: 10px 0 0 0;
     color: #999;
     font-size: 15px;
-    text-align: end;
+    text-align: center;
 }
 
 #footer .pz-pablo a{
     text-decoration: none;
     color: #999;
+    transition: all 0.3s ease;
+}
 
+#footer .pz-pablo a:hover{
+    color: var(--white);
+    text-decoration: underline;
 }
 
 /* Media query */
@@ -1290,10 +1306,6 @@ ol, ul{
 
 }
 
-@media (min-width: 759px){
-
-}
-
 @media (min-width: 844px){
     .big{
         width: 600px;
@@ -1312,21 +1324,71 @@ ol, ul{
         top: 344px;
     }
 
-    .productos-grid{
-        padding: 10%;
-        gap: 40px;
+    .productos {
+        padding: 60px 15%;
     }
 
-    .remedios-header{
-        padding: 0px 150px;
+    #rem-nat{
+        padding: 60px 15%;
     }
 
     .inner {
         padding: 0 50px;
         gap: 40px;
     }
+
+    #rem-nat p{
+        margin: 30px 20%;
+        text-align: center;
+        font-size: 1.2rem;
+
+    }
+
+    .about-us-container p, li{
+        padding: 8px 15%;
+        font-size: 1.2rem;
+    }
+
+    #footer .redes a img {
+        width: 35px;
+    }
 }
 
+@media (min-width: 1200px) {
+    #nav-bar{
+        padding: 10px 15%;
+    }
+
+    .nav-bar-container{
+        justify-content: space-around;
+    }
+
+    .nav-menu--second, .nav-menu, .nav-icon, ul{
+        display: none;
+    }
+
+    .nav-title{
+        border: 1px solid red;
+        display: flex;
+        width: 70%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .nav-title a{
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    .nav-title a:hover{
+        transform: scale(1.1);
+        text-decoration: underline;
+
+    }
+
+}
 
 @keyframes show {
     from {
