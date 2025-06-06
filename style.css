@@ -335,8 +335,8 @@ ol, ul{
 
 /* btn volver */
 #btnback {
-    margin-top: 75px;
-    margin-left: 5px;
+    margin-top: 78px;
+    margin-left: 15px;
     margin-bottom: 10px;
     background-color: var(--font-color);
     color: white;
@@ -972,6 +972,8 @@ ol, ul{
     transition: background 0.3s;
 }
 
+
+
 /* Sobre nosotros */
 .about-us-container{
     z-index: 3;
@@ -1334,17 +1336,15 @@ ol, ul{
 
     .inner {
         padding: 0 50px;
-        gap: 40px;
     }
-
-    #rem-nat p{
+    
+    .bottom{
         margin: 30px 20%;
         text-align: center;
         font-size: 1.2rem;
-
     }
 
-    .about-us-container p, li{
+    .about-us-container p{
         padding: 8px 15%;
         font-size: 1.2rem;
     }
@@ -1352,42 +1352,6 @@ ol, ul{
     #footer .redes a img {
         width: 35px;
     }
-}
-
-@media (min-width: 1200px) {
-    #nav-bar{
-        padding: 10px 15%;
-    }
-
-    .nav-bar-container{
-        justify-content: space-around;
-    }
-
-    .nav-menu--second, .nav-menu, .nav-icon, ul{
-        display: none;
-    }
-
-    .nav-title{
-        border: 1px solid red;
-        display: flex;
-        width: 70%;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    .nav-title a{
-        color: var(--white);
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-    }
-    .nav-title a:hover{
-        transform: scale(1.1);
-        text-decoration: underline;
-
-    }
-
 }
 
 @keyframes show {
