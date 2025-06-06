@@ -1309,6 +1309,7 @@ ol, ul{
 }
 
 @media (min-width: 844px){
+
     .big{
         width: 600px;
         height: 500px;
@@ -1354,6 +1355,13 @@ ol, ul{
     }
 }
 
+@media (min-width: 1290px){
+    .productos-grid {
+        gap: 40px;
+    }
+
+
+}
 @keyframes show {
     from {
         opacity: 0;
