@@ -42,7 +42,6 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
   }
 
 
-  // Enlaces internos
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -62,7 +61,7 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
 
 
   const menuBtn = document.querySelector('.nav-menu');
-  const closeBtn = document.querySelector('.nav-menu--second');
+  const closeBtn = document.querySelector('.nav-menu-second');
   const dropdown = document.getElementById('menu');
 
   function openMenu(e) {
@@ -74,7 +73,7 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
 
   document.addEventListener('DOMContentLoaded', () => {
   const menuButton = document.querySelector('.nav-menu');
-  const closeButton = document.querySelector('.nav-menu--second');
+  const closeButton = document.querySelector('.nav-menu-second');
   const dropdown = document.querySelector('.dropdown');
   const checkboxes = document.querySelectorAll('.dropdown-check');
 
