@@ -43,6 +43,7 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
     });
   }
 
+
   // Enlaces internos
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
