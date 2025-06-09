@@ -147,6 +147,7 @@ ol, ul{
     text-decoration: none;
     display: none;
 }
+
 /* === ICONOS DE MENÚ === */
 .nav-icon {
     width: 30px;
@@ -659,17 +660,30 @@ ol, ul{
     border: 1px solid var(--font-color);
 }
 
+.container-personalizado{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+}
+
 .product-mayorista{
     background: var(--second-bg-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 90%;
     margin-top: 20px;
+    width: 40%;
+    margin-top: 60px;
     padding: 20px;
     transition: transform 0.3s ease;
     text-align: center;
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 
     view-timeline-name: --card;
     view-timeline-axis: block;
@@ -1088,7 +1102,9 @@ ol, ul{
 
 .nosotros-info p{
     font-size: 1.1rem;
-    margin: 15px;
+    max-width: 850px;
+    margin: 25px;
+    text-align: justify;
 }
 
 .nosotros-info h3{
@@ -1101,6 +1117,7 @@ ol, ul{
     list-style: none;
     margin: 25px;
     text-align: left;
+    max-width: 850px;
 }
 
 .nosotros-info li{
@@ -1359,7 +1376,6 @@ ol, ul{
     .productos-grid {
         gap: 40px;
     }
-
 
 }
 @keyframes show {
