@@ -1,6 +1,5 @@
 const btnUp = document.getElementById('btnUp');
 
-// Mostrar u ocultar el botón según el scroll
 window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         btnUp.style.display = 'block';
@@ -9,7 +8,6 @@ window.addEventListener('scroll', () => {
       }
     });
 
-    // Al hacer click, subir suavemente
     btnUp.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
@@ -22,8 +20,8 @@ const btnWpp = document.getElementById('btnWpp');
 
 document.querySelectorAll('.leer-mas').forEach(btn => {
   btn.addEventListener('click', () => {
-    const card = btn.closest('.remedio'); // 👈 buscar la tarjeta completa
-    const extra = card.querySelector('.remedios-extra'); // 👈 buscar solo en su tarjeta
+    const card = btn.closest('.remedio');
+    const extra = card.querySelector('.remedios-extra');
     const visible = extra.classList.contains('visible');
     
     extra.classList.toggle('visible');
@@ -50,17 +48,14 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
       e.preventDefault();
       const targetId = this.getAttribute('href').slice(1);
       scrollWithOffset(targetId);
-      // Cambiar el hash sin saltar
       history.pushState(null, '', `#${targetId}`);
     });
   });
 
-  // Si se carga con hash desde otra página
   window.addEventListener('load', () => {
     const hash = window.location.hash;
     if (hash) {
       const targetId = hash.replace('#', '');
-      // Esperar un poquito para que se renderice todo
       setTimeout(() => scrollWithOffset(targetId), 100);
     }
   });
@@ -70,7 +65,6 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
   const closeBtn = document.querySelector('.nav-menu--second');
   const dropdown = document.getElementById('menu');
 
-  // Función para abrir el menú
   function openMenu(e) {
     e.preventDefault();
     dropdown.classList.add('active');
@@ -84,22 +78,19 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
   const dropdown = document.querySelector('.dropdown');
   const checkboxes = document.querySelectorAll('.dropdown-check');
 
-  // Abrir menú
   menuButton.addEventListener('click', () => {
     dropdown.classList.add('active');
     menuButton.style.display = 'none';
     closeButton.style.display = 'block';
   });
 
-  // Cerrar menú
   closeButton.addEventListener('click', () => {
     dropdown.classList.remove('active');
     closeButton.style.display = 'none';
     menuButton.style.display = 'block';
-    checkboxes.forEach(cb => cb.checked = false); // Cerrar todos los submenús
+    checkboxes.forEach(cb => cb.checked = false);
   });
 
-  // Cerrar menú y submenús al hacer clic en cualquier enlace
   dropdown.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       dropdown.classList.remove('active');
@@ -110,7 +101,6 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
   });
 });
 
-  // ✅ Cerrar al hacer clic fuera del nav
   document.addEventListener('click', (e) => {
     const isClickInside = dropdown.contains(e.target) || menuBtn.contains(e.target) || closeBtn.contains(e.target);
     if (!isClickInside) {
