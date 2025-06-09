@@ -1347,6 +1347,10 @@ ol, ul{
     .productos {
         padding: 60px 15%;
     }
+    
+    #page{
+        padding: 60px 15%;
+    }
 
     #rem-nat{
         padding: 60px 15%;
