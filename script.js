@@ -15,8 +15,8 @@ window.addEventListener('scroll', () => {
       });
     });
 
-const btnWpp = document.getElementById('btnWpp');
 
+const btnWpp = document.getElementById('btnWpp');
 
 document.querySelectorAll('.leer-mas').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -28,6 +28,7 @@ document.querySelectorAll('.leer-mas').forEach(btn => {
     btn.textContent = visible ? 'Leer más...' : 'Leer menos...';
   });
 });
+
 
   const OFFSET = 80;
 
