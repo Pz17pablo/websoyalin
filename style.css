@@ -477,7 +477,7 @@ ol, ul{
     text-align: left;
     padding: 2px 7px;
     color: var(--second-bg-color);
-    border-radius: 3px 6px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
     right: 20px;
     top: 20px;
 }
@@ -489,7 +489,7 @@ ol, ul{
     text-align: left;
     padding: 2px 7px;
     color: var(--white);
-    border-radius: 10px;
+    border-radius: 3px;
     right: 20px;
     top: 170px;
 }
@@ -1050,7 +1050,7 @@ ol, ul{
 .nosotros-info ul{
     list-style: none;
     margin: 25px;
-    text-align: left;
+    text-align: justify;
     max-width: 850px;
 }
 
@@ -1364,6 +1364,44 @@ ol, ul{
     }
 }
 
+@media (min-width: 1314px){
+    .big{
+        width: 430px;
+        height: 400px;
+    }
+
+    .big .top{
+        font-size: 1.5rem;
+        right: 59px;
+        top: 20px;
+    }
+
+    .big .precio{
+        font-size: 1.8rem;
+        right: 59px;
+        top: 264px;
+    }
+}
+
+@media (min-width: 1740px){
+        .big{
+        width: 600px;
+        height: 500px;
+    }
+
+    .big .top{
+        font-size: 1.5rem;
+        right: 76px;
+        top: 20px;
+    }
+
+    .big .precio{
+        font-size: 1.8rem;
+        right: 76px;
+        top: 344px;
+    }
+}
+    
 @keyframes show {
     from {
         opacity: 0;
