@@ -594,6 +594,13 @@ ol, ul{
     color: var(--black);
 }
 
+.big-prod{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 .container-personalizado{
     display: flex;
     width: 100%;
@@ -955,12 +962,11 @@ ol, ul{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 #bienvenida p{
     margin-top: 10px;
-    width: 70%;
+    width: 100%;
 }
 
 .soyalin-info h1{
@@ -1340,10 +1346,18 @@ ol, ul{
     #footer .redes a img {
         width: 35px;
     }
+
+    #bienvenida p{
+        width: 75%;
+    }
 }
 
-@media (min-width: 1290px){
+@media (min-width: 1271px){
     .productos-grid {
+        gap: 40px;
+    }
+
+    .big-prod{
         gap: 40px;
     }
 
@@ -1380,25 +1394,6 @@ ol, ul{
         font-size: 1.8rem;
         right: 59px;
         top: 264px;
-    }
-}
-
-@media (min-width: 1740px){
-        .big{
-        width: 600px;
-        height: 500px;
-    }
-
-    .big .top{
-        font-size: 1.5rem;
-        right: 76px;
-        top: 20px;
-    }
-
-    .big .precio{
-        font-size: 1.8rem;
-        right: 76px;
-        top: 344px;
     }
 }
     
